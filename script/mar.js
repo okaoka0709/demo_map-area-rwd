@@ -8,14 +8,12 @@ MarNode.prototype.mar = function(){
 		$area = $map.querySelectorAll('area'),
 		$area_length = $area.length;
 
-	var _width = null;
+	var _width = $img.naturalWidth;
 
 	if( $img.style.width.match('px') ) {
 		_width = parseInt($img.style.width, 10);
 	}else if( $img.getAttribute('width') ) {
 		_width = parseInt($img.getAttribute('width'), 10);
-	}else {
-		_width = $img.naturalWidth;
 	}
 
 	$img.style.height = "auto";
